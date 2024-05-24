@@ -1,2 +1,4 @@
-foo
+makeice
 ===
+
+this encrypts
