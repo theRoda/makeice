@@ -7,4 +7,9 @@ def makeSBXOR(plaintext, key):
         return(hexconvert)
 
 def makeRKXOR(plaintext, key):
-    pass
+    if isinstance(key, str):
+        bytesplain = bytearray.fromhex(plaintext.encode().hex())
+        byteskey = bytearray.fromhex(key.encode().hex())
+        encrypted = [bytestr ^ byteskey[index % len(byteskey)] for index, bytestr in enumerate(bytesplain)]
+        hexencoded = ''.join(["%02x" % ord(chr(x)) for x in encrypted])
+        return(hexencoded)
