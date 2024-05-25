@@ -1,5 +1,5 @@
 def makeSBXOR(plaintext, key):
-    if isinstance(key, int) and key < 256:
+    if isinstance(key, int) and key < 128:
         byteskey = bytes([key])
         bytesplain = plaintext.encode()
         encoded = bytes(x ^ y for x, y in zip(bytesplain, byteskey * len(plaintext))).decode()

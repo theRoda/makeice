@@ -27,7 +27,7 @@ def iceAll(plaintext, key):
         print(ciph)
 
 def main():
-    iceAll(test, 13)
+    iceAll(test, None)
 
 if __name__ == "__main__":
     main()
