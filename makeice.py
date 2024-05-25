@@ -16,16 +16,18 @@ def iceAll(plaintext, key):
     sbxor = c.makeSBXOR(plaintext, key)
     rkxor = c.makeRKXOR(plaintext, key)
     encodehex = c.makeHex(plaintext, key)
+    reverse = c.makeReverse(plaintext, key)
     icebox.append(f'[!] {caesar} | CAESAR | {key}')
     icebox.append(f'[!] {atbash} | ATBASH | {key}')
     icebox.append(f'[!] {sbxor} | SBXOR | {key}')
     icebox.append(f'[!] {rkxor} | RKXOR | {key}')
     icebox.append(f'[!] {encodehex} | HEX | {key}')
+    icebox.append(f'[!] {reverse} | REVERSE | {key}')
     for ciph in icebox:
         print(ciph)
 
 def main():
-    iceAll(test, key5)
+    iceAll(test, 13)
 
 if __name__ == "__main__":
     main()
