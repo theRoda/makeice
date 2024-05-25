@@ -15,15 +15,17 @@ def iceAll(plaintext, key):
     atbash = c.makeAtbash(plaintext, key)
     sbxor = c.makeSBXOR(plaintext, key)
     rkxor = c.makeRKXOR(plaintext, key)
+    encodehex = c.makeHex(plaintext, key)
     icebox.append(f'[!] {caesar} | CAESAR | {key}')
     icebox.append(f'[!] {atbash} | ATBASH | {key}')
     icebox.append(f'[!] {sbxor} | SBXOR | {key}')
     icebox.append(f'[!] {rkxor} | RKXOR | {key}')
+    icebox.append(f'[!] {encodehex} | HEX | {key}')
     for ciph in icebox:
         print(ciph)
 
 def main():
-    iceAll(text5, key5)
+    iceAll(test, key5)
 
 if __name__ == "__main__":
     main()
