@@ -16,7 +16,7 @@ def iceAll(plaintext, key):
     sbxor = c.makeSBXOR(plaintext, key)
     rkxor = c.makeRKXOR(plaintext, key)
     icebox.append(f'[!] {caesar} | CAESAR | {key}')
-    icebox.append(f'[!] {atbash} | ATBASH | N/A')
+    icebox.append(f'[!] {atbash} | ATBASH | {key}')
     icebox.append(f'[!] {sbxor} | SBXOR | {key}')
     icebox.append(f'[!] {rkxor} | RKXOR | {key}')
     for ciph in icebox:
