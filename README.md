@@ -2,9 +2,10 @@ makeice
 ===
 
 encrypt/encode
-* Atbash
-* Caesar
 * Hex
 * Reverse
+* Base64
+* Atbash
+* Caesar
 * Single Byte XOR
 * Repeating Key XOR
