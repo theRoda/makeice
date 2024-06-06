@@ -26,12 +26,14 @@ def iceAll(plaintext, key):
     rkxor = c.makeRKXOR(plaintext, key)
     encodehex = c.makeHex(plaintext, key)
     reverse = c.makeReverse(plaintext, key)
+    b64 = c.makeBase64(plaintext, key)
     icebox.append(f'[!] {caesar} | CAESAR | {key}')
     icebox.append(f'[!] {atbash} | ATBASH | {key}')
     icebox.append(f'[!] {sbxor} | SBXOR | {key}')
     icebox.append(f'[!] {rkxor} | RKXOR | {key}')
     icebox.append(f'[!] {encodehex} | HEX | {key}')
     icebox.append(f'[!] {reverse} | REVERSE | {key}')
+    icebox.append(f'[!] {b64} | BASE64 | {key}')
     for ciph in icebox:
         print(ciph)
 

@@ -1,4 +1,5 @@
 import string
+import base64
 def makeAtbash(plaintext, key):
     if key is None:
         alphabet = string.ascii_lowercase
@@ -14,4 +15,9 @@ def makeHex(plaintext, key):
 def makeReverse(plaintext, key):
     if key is None:
         encoded = plaintext[::-1]
+        return(encoded)
+
+def makeBase64(plaintext, key):
+    if key is None:
+        encoded = base64.b64encode(str.encode(plaintext)).decode()
         return(encoded)
